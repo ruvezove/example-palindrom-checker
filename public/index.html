@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
+    <title>Палиндром Checker</title>
+
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <span id="background"></span>
+
+    <div class="main">
+        <h1>Проверка на палиндром</h1>
+
+        <div class="flex">
+            <p>Напиши палиндром или слово</p>
+            <input type="text" placeholder="Слово" id="word">
+        </div>
+        
+        <div class="flex">
+            <p>Авто-проверка </p>
+            <input type="checkbox" id="autocheck">
+        </div>
+
+        <div class="flex">
+            <p id="status">Не проверено</p>
+        </div>
+
+        <button>Проверить</button>
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>

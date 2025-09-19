@@ -1,0 +1,124 @@
+@font-face {
+    font-family: SCPB;
+    src: local('Source Code Pro'),
+        url('./fonts/Source Code Pro Bold.ttf') format('TrueType');
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: linear-gradient(65deg, #060606, #222);
+    z-index: -1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: SCPB;
+    outline: none;
+    -webkit-tap-highlight-color: none;
+}
+
+.main {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding: 15px;
+    position: fixed;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+    margin-top: 5px;
+    width: auto;
+}
+
+p {
+    line-height: 24px;
+}
+
+input[type="text"] {
+    color: #000;
+    background: #fff;
+    padding: 5px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    transition: .2s ease filter;
+}
+
+input[type="checkbox"] {
+    height: 22px;
+    margin-top: 2px;
+    width: 22px;
+    transition: .2s ease filter,
+        .1s ease transform;
+}
+
+.bad {
+    color: #ff8585
+}
+
+.good {
+    color: #81ff7c
+}
+
+button {
+    color: #000c;
+    padding: 5px;
+    line-height: 8px;
+    background: #fff;
+    border-radius: 4px;
+    border: none;
+    height: 24px;
+    transition: .2s ease filter,
+        .1s ease transform;
+    margin-top: 10px;
+    min-width: 100px;
+    width: 20%;
+}
+
+button:hover:not(:disabled),
+input[type="checkbox"]:hover,
+input[type="text"]:hover {
+    filter: brightness(0.8);
+}
+
+button:active:not(:disabled),
+input[type="checkbox"]:active {
+    transform: scale(0.9);
+}
+
+button:disabled {
+    background: #aaa;
+}
+
+::placeholder {
+    color: #0007
+}
+
+#status::before {
+    content: "> ";
+}
+
+#status::after {
+    content: " <";
+}
+
+@media (max-width: 525px) {
+    .flex {
+        flex-flow: column;
+        gap: 5px;
+        border: 2px solid #fff2;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+::selection {
+    background: #fff3;
+}
